@@ -1,0 +1,17 @@
+{
+  "task_code": "T1",
+  "summary": "Updated the project repository index.html to render a minimal webpage displaying the exact text hello,zju!. Verified the text is present in the visible h1 content and document title. Pushed project commit e41eae0fc17d97baa032e52001d18e02933ba239.",
+  "artifacts": [
+    {
+      "path": "outputs/proj-3-81f13b/T1/implementation-report.md",
+      "type": "report",
+      "description": "Implementation and verification summary for T1."
+    },
+    {
+      "path": "outputs/proj-3-81f13b/T1/usage.json",
+      "type": "usage",
+      "description": "Task execution metadata."
+    }
+  ],
+  "project_commit": "e41eae0fc17d97baa032e52001d18e02933ba239"
+}
