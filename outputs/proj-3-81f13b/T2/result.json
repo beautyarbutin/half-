@@ -1,0 +1,21 @@
+{
+  "task_code": "T2",
+  "summary": "Verified the project static webpage at commit e41eae0fc17d97baa032e52001d18e02933ba239. The repository has no package.json, so no build script is defined. Static HTML verification confirmed the body visible text is exactly hello,zju! and the document title is exactly hello,zju!.",
+  "artifacts": [
+    {
+      "path": "outputs/proj-3-81f13b/T2/verification-report.md",
+      "type": "report",
+      "description": "Build-script check and static page output verification report for T2."
+    },
+    {
+      "path": "outputs/proj-3-81f13b/T2/usage.json",
+      "type": "usage",
+      "description": "Task execution metadata."
+    }
+  ],
+  "predecessors": [
+    "outputs/proj-3-81f13b/T1/result.json"
+  ],
+  "project_commit": "e41eae0fc17d97baa032e52001d18e02933ba239",
+  "verification_status": "passed"
+}
