@@ -1,0 +1,33 @@
+{
+  "plan_name": "test3 hello,zju webpage delivery plan",
+  "tasks": [
+    {
+      "task_code": "T1",
+      "task_name": "Create hello,zju webpage",
+      "description": "In the project repository https://github.com/beautyarbutin/half_test, inspect the existing project structure and implement the minimal webpage required by the task goal so that the page displays the exact text: hello,zju!",
+      "assignee": "Codex Pro",
+      "depends_on": [],
+      "expected_output": "Project repository contains the webpage implementation showing hello,zju! with changes ready for build or static verification."
+    },
+    {
+      "task_code": "T2",
+      "task_name": "Build and verify page output",
+      "description": "Run the appropriate local verification for the project, such as opening the static HTML or running the repository's build/test command if present. Confirm the rendered page or generated artifact displays hello,zju! exactly.",
+      "assignee": "Codex Pro",
+      "depends_on": [
+        "T1"
+      ],
+      "expected_output": "Verification result confirms the webpage displays hello,zju!, with any relevant command output or manual check summarized."
+    },
+    {
+      "task_code": "T3",
+      "task_name": "Publish project and HALF coordination outputs",
+      "description": "Commit and push code changes to the project repository. Write required coordination artifacts under HALF repository path outputs/proj-3-81f13b, including result.json and usage.json after execution, then commit and push those HALF repository updates.",
+      "assignee": "Codex Pro",
+      "depends_on": [
+        "T2"
+      ],
+      "expected_output": "Project repository has pushed implementation changes; HALF repository has pushed coordination artifacts under outputs/proj-3-81f13b."
+    }
+  ]
+}
