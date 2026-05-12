@@ -1,0 +1,63 @@
+{
+  "plan_name": "issue63 test execution plan",
+  "tasks": [
+    {
+      "task_code": "T1",
+      "task_name": "Confirm repositories and issue scope",
+      "description": "In the project repository https://github.com/beautyarbutin/half_test, confirm the active branch, current git status, project entry points, available build/test commands, and the concrete scope implied by the goal \"test issue63\". Also confirm that HALF coordination artifacts must be written under the collaboration repository directory issue63.",
+      "assignee": "Codex Pro (codex-pro)",
+      "depends_on": [],
+      "expected_output": "A short repository and scope note identifying the project files likely to be changed, the verification commands to run, and any ambiguity or constraints discovered before implementation."
+    },
+    {
+      "task_code": "T2",
+      "task_name": "Reproduce or define issue63 validation target",
+      "description": "Use the local same-server environment to run the current project and reproduce the issue63 scenario when enough information exists. If the issue details are not explicit in the repository, derive the smallest testable target from local docs, existing tests, issue-related filenames, or recent project context, and record the assumption before making changes.",
+      "assignee": "Codex Pro (codex-pro)",
+      "depends_on": [
+        "T1"
+      ],
+      "expected_output": "A reproducible baseline result or a clearly stated test target for issue63, including commands executed and observed behavior."
+    },
+    {
+      "task_code": "T3",
+      "task_name": "Implement focused project changes",
+      "description": "Make the minimal necessary code, test, or business-file changes in the project repository to satisfy the issue63 test target. Follow the existing project structure and avoid unrelated refactors or unrelated worktree changes.",
+      "assignee": "Codex Pro (codex-pro)",
+      "depends_on": [
+        "T2"
+      ],
+      "expected_output": "Project repository contains the focused implementation or test updates required for issue63, with unrelated local changes left untouched."
+    },
+    {
+      "task_code": "T4",
+      "task_name": "Run build and verification",
+      "description": "Run the appropriate local build, tests, static checks, or runtime verification for the changed project area. Because this depends on local files and runtime access, it must be executed by the same-server agent.",
+      "assignee": "Codex Pro (codex-pro)",
+      "depends_on": [
+        "T3"
+      ],
+      "expected_output": "Verification summary with exact commands, pass/fail status, and any remaining risk or blocked command reason."
+    },
+    {
+      "task_code": "T5",
+      "task_name": "Commit and push project repository changes",
+      "description": "Stage only the project repository files related to issue63, create a clear commit, and push it to the appropriate remote branch. Do not stage or revert unrelated user or pre-existing changes.",
+      "assignee": "Codex Pro (codex-pro)",
+      "depends_on": [
+        "T4"
+      ],
+      "expected_output": "Project repository has a pushed commit for issue63, with branch name and commit hash recorded."
+    },
+    {
+      "task_code": "T6",
+      "task_name": "Write and publish HALF coordination outputs",
+      "description": "Write task outputs, result.json, and usage.json under the HALF collaboration repository directory issue63 so the HALF polling service can read them. Then commit and push the HALF repository changes.",
+      "assignee": "Codex Pro (codex-pro)",
+      "depends_on": [
+        "T5"
+      ],
+      "expected_output": "HALF collaboration repository contains issue63 execution artifacts, including result.json and usage.json after execution, and those changes are committed and pushed."
+    }
+  ]
+}
