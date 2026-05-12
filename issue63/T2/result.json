@@ -1,1 +1,4 @@
-[]
+{
+  "task_code": "T1",
+  "artifacts": ["issue63/T1/report.md"]
+}
