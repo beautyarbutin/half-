@@ -1,0 +1,53 @@
+{
+  "plan_name": "test0512 hello,zju! webpage delivery plan",
+  "tasks": [
+    {
+      "task_code": "T1",
+      "task_name": "确认项目仓库和页面入口",
+      "description": "在项目代码仓库 beautyarbutin/half_test 中确认当前分支、应用类型、页面入口文件和可用的本地运行/构建命令。该任务涉及本地文件读写和仓库状态确认，优先由同服务器 Agent 执行。",
+      "assignee": "Codex Pro (codex-pro)",
+      "depends_on": [],
+      "expected_output": "明确需要修改的页面文件、启动或构建命令，以及项目仓库当前 Git 状态说明。"
+    },
+    {
+      "task_code": "T2",
+      "task_name": "实现 hello,zju! 网页内容",
+      "description": "按项目现有技术栈和目录结构进行最小必要修改，生成一个网页，首屏内容展示文本 hello,zju!，避免引入不必要依赖或额外功能。",
+      "assignee": "Codex Pro (codex-pro)",
+      "depends_on": [
+        "T1"
+      ],
+      "expected_output": "项目代码仓库中完成网页实现，页面可渲染并显示 hello,zju!。"
+    },
+    {
+      "task_code": "T3",
+      "task_name": "本地构建和页面验证",
+      "description": "运行项目可用的构建、测试或静态验证命令；如项目支持本地服务，则启动后检查页面内容是否正确显示 hello,zju!。该任务需要同服务器环境访问能力。",
+      "assignee": "Codex Pro (codex-pro)",
+      "depends_on": [
+        "T2"
+      ],
+      "expected_output": "验证命令结果、页面显示检查结论，以及若存在无法运行的命令则记录原因。"
+    },
+    {
+      "task_code": "T4",
+      "task_name": "提交并推送项目仓库业务变更",
+      "description": "在项目代码仓库中仅暂存本任务相关网页改动，创建清晰提交并推送到远端，避免触碰无关变更。",
+      "assignee": "Codex Pro (codex-pro)",
+      "depends_on": [
+        "T3"
+      ],
+      "expected_output": "项目代码仓库完成 git add、git commit、git push，并记录提交哈希和分支。"
+    },
+    {
+      "task_code": "T5",
+      "task_name": "写入 HALF 协作产物",
+      "description": "在 HALF 协作仓库 outputs/proj-4-3a334c 中写入任务输出文件、result.json 和 usage.json，确保 HALF 轮询系统可读取执行结果。",
+      "assignee": "Codex Pro (codex-pro)",
+      "depends_on": [
+        "T4"
+      ],
+      "expected_output": "协作目录包含任务执行输出、result.json、usage.json，并在 HALF 仓库完成提交和推送。"
+    }
+  ]
+}
